@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap");
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --clr-white: #ffffff;
+  --clr-black: #202020;
+  --clr-grey: #707070;
+  --clr-blue: #6C63FF;
+  --clr-blue-2: #4c46b6;
+  --clr-green: #4fb646;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.homes {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home__details {
+  width: 70%;
+  margin: 0 auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background: var(--clr-white);
+}
+
+.home__image {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.home__image img {
+  max-width: 100%;
+}
+
+.home__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.home__close img {
+  width: 25px;
+  height: 25px;
+}
+
+.home__overview {
+  height: 100%;
+  margin: 0 20px;
+  padding-right: 40px;
+
+  overflow-y: scroll;
+}
+
+.home__overview hr {
+  margin: 10px auto;
+}
+
+
+.home__buy,
+.home__contact,
+.home__owned {
+  margin: 20px 5px;
+
+  /* background-color: var(--clr-blue); */
+  color: var(--clr-white);
+
+  border: none;
+  border-radius: 4px;
+
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.home__buy {
+  width: 140px;
+  height: 35px;
+}
+
+.home__buy:hover {
+  background-color: var(--clr-blue-2);
+}
+
+.home__contact {
+  width: 130px;
+  height: 35px;
+
+  background-color: transparent;
+  color: var(--clr-blue);
+
+  border: 1px solid var(--clr-blue);
+}
+
+.home__contact:hover {
+  background-color: #f7f7f7;
+  color: var(--clr-blue-2);
+}
+
+.home__owned {
+  height: 50px;
+  background-color: var(--clr-green);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+}
