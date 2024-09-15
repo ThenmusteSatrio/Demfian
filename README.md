@@ -15,7 +15,7 @@ npm run dev
 ```
 
 Third:
-After you successfully run the command npx hardhat ignition deploy .\ignition\modules\deploy.cjs --network localhost then you will get 10 development accounts to use in testing, import several accounts into metamask, use these accounts to sign in to application.
+After you successfully run the command npx hardhat ignition deploy .\ignition\modules\deploy.cjs --network localhost then you will get 10 development accounts to use in testing (you can see private keys and others in the powersell terminal, etc), import some account to metamask, use this account to log in to the application.
 
 Fourth: 
 To mint (upload nft) click the minting navigation button and complete the data based on the form there, and to list on the marketplace go to the profile page by clicking on your profile photo image at the top right of the navbar then select the nft you want to list with Clicking the sell button, to see the NFT listed on the marketplace, go to the marketplace page
